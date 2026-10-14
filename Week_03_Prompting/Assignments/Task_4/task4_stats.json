@@ -1,0 +1,104 @@
+{
+  "alpha": 0.05,
+  "accuracy_ci_wilson": {
+    "OODA": {
+      "low": 0.2129675238617777,
+      "high": 0.35263707010567974
+    },
+    "ICIO": {
+      "low": 0.9643643733679713,
+      "high": 0.9988602226172317
+    },
+    "RISEN": {
+      "low": 0.8853221143215338,
+      "high": 0.9645819409595274
+    }
+  },
+  "cochran_q": {
+    "Q": 205.45945945945945,
+    "dof": 2,
+    "p_value": 2.426862946951678e-45
+  },
+  "pairwise_mcnemar": {
+    "OODA vs ICIO": {
+      "discordant_b01": 111,
+      "discordant_b10": 0,
+      "n_discordant": 111,
+      "p_value": 7.703719777548943e-34,
+      "p_value_holm": 2.311115933264683e-33,
+      "significant_holm": true
+    },
+    "OODA vs RISEN": {
+      "discordant_b01": 102,
+      "discordant_b10": 0,
+      "n_discordant": 102,
+      "p_value": 3.944304526105059e-31,
+      "p_value_holm": 7.888609052210118e-31,
+      "significant_holm": true
+    },
+    "ICIO vs RISEN": {
+      "discordant_b01": 0,
+      "discordant_b10": 9,
+      "n_discordant": 9,
+      "p_value": 0.00390625,
+      "p_value_holm": 0.00390625,
+      "significant_holm": true
+    }
+  },
+  "metrics": {
+    "OODA": {
+      "prompt": "OODA",
+      "folder": "Task_2_1",
+      "model": "gpt-6-luna",
+      "accuracy": 0.27741935483870966,
+      "correct": 43,
+      "total": 155,
+      "input_tokens": 1100000,
+      "output_tokens": 37400,
+      "total_tokens": 1137400,
+      "credits_billed": 4.43,
+      "inference_time_s": 495,
+      "credits_per_correct": 0.10302325581395348,
+      "tokens_per_correct": 26451.162790697676,
+      "time_per_correct_s": 11.511627906976743,
+      "credits_per_accuracy_point": 0.1596860465116279,
+      "expected_repeats_to_correct": 3.604651162790698
+    },
+    "ICIO": {
+      "prompt": "ICIO",
+      "folder": "Task_2_2",
+      "model": "gpt-6-luna",
+      "accuracy": 0.9935483870967742,
+      "correct": 154,
+      "total": 155,
+      "input_tokens": 2600000,
+      "output_tokens": 66400,
+      "total_tokens": 2666400,
+      "credits_billed": 8.04,
+      "inference_time_s": 901,
+      "credits_per_correct": 0.0522077922077922,
+      "tokens_per_correct": 17314.285714285714,
+      "time_per_correct_s": 5.85064935064935,
+      "credits_per_accuracy_point": 0.08092207792207791,
+      "expected_repeats_to_correct": 1.0064935064935066
+    },
+    "RISEN": {
+      "prompt": "RISEN",
+      "folder": "Task_2_3",
+      "model": "gpt-6-luna",
+      "accuracy": 0.9354838709677419,
+      "correct": 145,
+      "total": 155,
+      "input_tokens": 756900,
+      "output_tokens": 33100,
+      "total_tokens": 790000,
+      "credits_billed": 3.21,
+      "inference_time_s": 1079,
+      "credits_per_correct": 0.02213793103448276,
+      "tokens_per_correct": 5448.275862068966,
+      "time_per_correct_s": 7.441379310344828,
+      "credits_per_accuracy_point": 0.03431379310344827,
+      "expected_repeats_to_correct": 1.0689655172413794
+    }
+  }
+}

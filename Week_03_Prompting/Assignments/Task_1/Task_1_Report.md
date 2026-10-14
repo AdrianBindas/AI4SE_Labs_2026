@@ -1,11 +1,6 @@
-Create sql queries from NLP.
-schema, dump, dataset
-
-All frameworks were retrieved from frompting.com.
-
 Each prompt was executed in new session using ```copilot --name "My task" -i (Get-Content .\prompt.md -Raw)```
 
-# OODA
+# [OODA](https://frompting.com/frameworks/ooda)
 I recognized it from decision making guidelines in combat. I expect it to be not so well suited for SE prompting but interesting nonetheless.
 
 Reported inference time - 8m 15s
@@ -19,7 +14,7 @@ Model used - gpt-6-luna
 Accuracy: 0.2774 (27.74%)
 Correct: 43/155
 
-# ICIO
+# [ICIO](https://frompting.com/frameworks/icio)
 Seems simple and unrestrictive, should be a baseline/bare mininum for prompting in my opinion.
 
 Reported inference time - 15m 1s
@@ -33,7 +28,7 @@ Model used - gpt-6-luna
 Accuracy: 0.9935 (99.35%)
 Correct: 154/155
 
-# RISEN
+# [RISEN](https://dev.to/gunnargrosch/writing-system-prompts-that-actually-work-the-risen-framework-for-ai-agents-4p94)
 Looked nicely structured, no redundant fields but not overly complicated or rigid.
 
 Reported inference time - 17m 59s
