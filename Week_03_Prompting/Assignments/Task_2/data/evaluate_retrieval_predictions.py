@@ -10,7 +10,7 @@ from pathlib import Path
 
 DATA_DIR = Path(__file__).resolve().parent
 LABELS_PATH = DATA_DIR / "restaurants_dataset.csv"
-PREDICTIONS_PATH = DATA_DIR / "restaurants_dataset_predictions.csv"
+PREDICTIONS_PATH = DATA_DIR / "C:\\fmfi\\AI4SE_Labs_2026\\Week_03_Prompting\\Assignments\\Task_2\\Task_2_3\\restaurants_dataset_predictions.csv"
 SCHEMA_PATH = DATA_DIR / "restaurants-schema.csv"
 DATABASE_PATH = DATA_DIR / "restaurants-db.txt"
 
@@ -110,8 +110,9 @@ def main():
     try:
         total = 0
         correct = 0
-        with PREDICTIONS_PATH.open(encoding="utf-8", newline="") as source:
+        with PREDICTIONS_PATH.open(encoding="utf-8-sig", newline="") as source:
             for line_number, row in enumerate(csv.DictReader(source), start=2):
+                print(row)
                 question = row["question"]
                 if not labels_by_question[question]:
                     raise ValueError(
