@@ -11,4 +11,4 @@ POINTS AWARDED FOR SUCCESSFUL COMPLETION: 2b
 OUTPUT:
 A storage of chunks-embedding pairs
 A python script for turning a chunk into an embedding
-A short report on your desing decisions
+A short report on your design decisions

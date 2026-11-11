@@ -1,0 +1,7 @@
+# Task 6 — Repository-Aware Generation Pipeline
+
+I would use a hybrid retrieval pipeline rather than embedding similarity alone: first resolve named files, classes, methods, and symbols with syntax-aware indexing; then combine exact identifier search and BM25-style lexical ranking with vector similarity, optionally followed by a reranker. The retriever should expand from matched symbols to their callers, callees, related tests, and relevant configuration, while enforcing a token budget and removing duplicate or low-value context.
+
+I would split source code along syntax boundaries (modules, classes, functions, and methods) and attach path, symbol, signature, and line-range metadata. Oversized functions could be split at statement boundaries with limited overlap. Documentation and other prose can use paragraph-aware chunks. This preserves usable code units more reliably than fixed line windows.
+
+I would select a variable number of chunks based on relevance and the model's context budget, rather than always selecting five. The generator should receive the task, target signature, retrieved code and tests, then produce a narrow patch. A validation loop should apply the patch in an isolated worktree, run focused tests and static checks, feed concise failures back for a bounded repair attempt, and require review before broader or destructive changes. Deterministic symbol lookup and tests complement embeddings; neither embedding-only retrieval nor a fixed chunk count is reliably best for every task.
